@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr><th> ID </th><th>Item Name</th><th>Item Size</th><th> Quantity </th><th>Description</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let storage of currStorage">
+        <td>{{storage.id}}</td>
+        <td>{{storage.itemName}}</td>
+        <td>{{storage.itemSize}}</td>
+        <td>{{storage.quantity}}</td>
+        <td>{{storage.itemDesc}}</td>
+        </tr>
+    </tbody>
+</table>

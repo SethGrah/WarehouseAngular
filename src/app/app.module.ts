@@ -15,9 +15,10 @@ import { AddToStorageComponent } from './add-to-storage/add-to-storage.component
 
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
 import {ButtonModule} from 'primeng/button';
-import { CardComponentComponent } from './card-component/card-component.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar'
+import {TableModule} from 'primeng/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,8 +27,7 @@ import {MatToolbarModule} from '@angular/material/toolbar'
     DeleteStorageComponent,
     UpdateStorageComponent,
     FindStorageNameComponent,
-    AddToStorageComponent,
-    CardComponentComponent
+    AddToStorageComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +35,7 @@ import {MatToolbarModule} from '@angular/material/toolbar'
     HttpClientModule,
     FormsModule,
     AccordionModule,
-    ButtonModule, FlexLayoutModule, BrowserAnimationsModule,MatToolbarModule
+    ButtonModule, FlexLayoutModule, BrowserAnimationsModule,MatToolbarModule,TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

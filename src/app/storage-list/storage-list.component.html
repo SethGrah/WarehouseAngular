@@ -1,15 +1,22 @@
 
-<table>
-    <thead>
-        <tr><th> ID </th><th>Item Name</th><th>Item Size</th><th> Quantity </th><th>Description</th></tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let storage of currStorage">
+<p-table [value]="currStorage" [autoLayout]="true" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr><th> ID </th><th>Item Name</th><th>Item Size</th><th> Quantity </th><th>Description</th><th></th></tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-storage>
+        <tr>
         <td>{{storage.id}}</td>
         <td>{{storage.itemName}}</td>
         <td>{{storage.itemSize}}</td>
-        <td>{{storage.quantity}}</td>
+        <td>
+            <div [ngClass]="{'outofstock':storage.quantity === 0}">
+                {{storage.quantity}}
+
+            </div>
+            
+        </td>
         <td>{{storage.itemDesc}}</td>
+        <p-button>Delete?</p-button>
         </tr>
-    </tbody>
-</table>
+    </ng-template>
+</p-table>

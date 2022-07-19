@@ -1,9 +1,23 @@
-
-  .cardList {
-    display: flex;
-    flex-direction: column;
-  }
-  /* Row Gap */
-  .cardList > *:not(:last-child) {
-    margin-bottom: 32px;
-  }
+.imgdiv{      
+  margin-left: 150px;      
+  height: 150px;      
+}      
+.img1{      
+  height: 200px;      
+  width: 200px;           
+}     
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer{
+  margin-top: auto;
+}
+.container {
+  display: flex; /* or inline-flex */
+  min-height: max-content;
+}
+.item {
+  flex-grow:2;
+}

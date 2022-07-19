@@ -1,7 +1,9 @@
 
 <header>
     <mat-toolbar>
+        <div class="imgdiv"><img src = "D:\Work Training\WarehouseProjects\warehouse-app\src\assets\Cowboy.png" class="img1" alt="Cowboy hat"/></div>
         <span>Wild Warehouse Management</span>
+        
     </mat-toolbar>
 
 </header>
@@ -9,19 +11,20 @@
 
 
 
-<div fxLayout="row" fxLayoutAlign="space-between">
+<div class="flex-container" fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="space-evenly">
 
 
 <app-find-storage-name></app-find-storage-name>
 <app-find-storage></app-find-storage>
 
 </div>
-<div fxLayout="row" fxLayoutAlign="space-between">
-    <app-add-to-storage></app-add-to-storage> 
+<div class="flex-container" fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="space-evenly">
+    <div  fxLayout="column"><app-add-to-storage></app-add-to-storage> </div>
+    <div class="item" fxLayout="column"><app-storage-list></app-storage-list></div>
+    <div fxLayout="column"><app-update-storage></app-update-storage></div>
 
-    
-    <app-storage-list></app-storage-list>
-    
+</div>
 
-    <app-delete-storage></app-delete-storage>
-    </div>
+<footer class="flex-footer" >
+    <div><app-delete-storage></app-delete-storage></div>
+</footer>

@@ -1,4 +1,4 @@
-<input type ="number" name="searchId" [(ngModel)]="searchId" (change)="onChange()"/>
+<input type ="string" name="searchName" [(ngModel)]="searchName" (change)="onChange()"/>
 <!-- parent child components @Input/@output
 
 seperate child component that renders a single artist object on a card
@@ -15,4 +15,3 @@ pass the selected artist to the child component
     <div>Quantity: {{storage.quantity}}</div>
     <div> Descriptio: {{storage.itemDesc}}</div>
 </section>
-<div><button type="button" pButton label="Submit"></button></div>

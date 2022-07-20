@@ -18,6 +18,9 @@ import {ButtonModule} from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar'
 import {TableModule} from 'primeng/table';
+import { HeaderComponent } from './header/header.component';
+import {MatButtonModule} from '@angular/material/button'
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import {TableModule} from 'primeng/table';
     DeleteStorageComponent,
     UpdateStorageComponent,
     FindStorageNameComponent,
-    AddToStorageComponent
+    AddToStorageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,7 @@ import {TableModule} from 'primeng/table';
     HttpClientModule,
     FormsModule,
     AccordionModule,
-    ButtonModule, FlexLayoutModule, BrowserAnimationsModule,MatToolbarModule,TableModule
+    ButtonModule, FlexLayoutModule, BrowserAnimationsModule,MatToolbarModule,TableModule,MatButtonModule,MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

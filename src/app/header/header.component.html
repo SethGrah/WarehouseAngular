@@ -1,0 +1,35 @@
+<mat-toolbar color ="primary">
+    <mat-toolbar-row fxLayoutAlign="start center">
+        <div fxLayout = "row">
+            <button mat-button>
+                <mat-icon>home</mat-icon>
+                <span class="logo">
+                    List
+                </span>
+            </button>
+            <div *ngIf ="!deviceXs">
+                <button mat-button><mat-icon>add</mat-icon><span>Add to storage</span></button>
+                <button mat-button><mat-icon>remove</mat-icon><span> Remove from to storage</span></button>
+            </div>
+        </div>
+
+    </mat-toolbar-row>
+
+    <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between end">
+        <div>
+            <button mat-button>
+                <mat-icon>add</mat-icon>
+                <span>
+                    Add to storage
+                </span>
+            </button>
+            <button mat-button>
+                <mat-icon>remove</mat-icon>
+                <span>
+                    Remove from to storage
+                </span>
+            </button>
+        </div>
+    </mat-toolbar-row>
+
+</mat-toolbar>

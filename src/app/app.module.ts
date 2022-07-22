@@ -28,7 +28,8 @@ import { Routes,RouterModule } from '@angular/router';
 import { UpdateStorageComponent } from './update-storage/update-storage.component';
 import { retry, catchError } from 'rxjs/operators';
 
-
+//https://github.com/SethGrah/WarehouseAngular
+//https://github.com/SethGrah/WarehouseMaven
 const routes: Routes=[{path:'storage-list',component:StorageListComponent},
                       {path:'add-to-storage',component:AddToStorageComponent}, 
                       {path: 'update-storage',component:UpdateStorageComponent}

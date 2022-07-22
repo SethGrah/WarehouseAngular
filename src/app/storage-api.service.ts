@@ -24,7 +24,7 @@ export class StorageApiService {
     return this.http.get(environment.apiUrl+name);
   }
   save(storage:any):Observable<any>{
-    return this.http.post<any>(environment.apiUrl,storage)
+    return this.http.post<any>(environment.apiUrl,storage);
   }
   delete(id:number):Observable<any>{
     return this.http.delete(environment.apiUrl+id);

@@ -29,8 +29,8 @@ export class StorageApiService {
   delete(id:number):Observable<any>{
     return this.http.delete(environment.apiUrl+id);
   }
-  update(storage:any):Observable<any>{
-    return this.http.put(environment.apiUrl,storage);
+  update(storage:any,id:any):Observable<any>{
+    return this.http.put(environment.apiUrl+id,storage);
   }
 
 //All basic Crud operations

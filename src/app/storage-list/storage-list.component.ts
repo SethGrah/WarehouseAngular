@@ -32,7 +32,7 @@ export class StorageListComponent implements OnInit {
   }
   onUpdate(storage:storageItem):void{
     console.log("Made it to Update" +storage.id);
-    this.service.update(storage).subscribe(data=>console.log(data));
+    this.service.update(storage,storage.id).subscribe(data=>console.log(data));
   }
   onUpdatePress(givenid:number):void{
 

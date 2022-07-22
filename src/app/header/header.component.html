@@ -11,6 +11,8 @@
                 <!-- Routing, when you click them, open the other component -->
                 <a routerLink="/storage-list" routerLinkActive="active" ariaCurrentWhenActive="page"><button mat-button ><mat-icon>menu_open</mat-icon><span>Saloon Inventory</span></button></a>
                 <a routerLink="/add-to-storage" routerLinkActive="active" ariaCurrentWhenActive="page"><button mat-button><mat-icon>add</mat-icon><span>Add to Saloon Inventory</span></button></a>
+                <!-- <a routerLink="/update-storage" routerLinkActive="active" ariaCurrentWhenActive="page"><button mat-button><mat-icon>sync</mat-icon><span>Update an item</span></button></a> -->
+
                 
             </div>
         </div>
@@ -20,17 +22,23 @@
     <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between end">
         <div>
             <button mat-button>
-                <mat-icon>add</mat-icon>
+                <mat-icon>menu_open</mat-icon>
                 <span>
                     Saloon Inventory
                 </span>
             </button>
             <button mat-button>
-                <mat-icon>remove</mat-icon>
+                <mat-icon>add</mat-icon>
                 <span>
-                    Add to Saloon Inventory
+                    Add 
                 </span>
             </button>
+            <!-- <button mat-button>
+                <mat-icon>sync</mat-icon>
+                <span>
+                   Update
+                </span>
+            </button> -->
         </div>
     </mat-toolbar-row>
 

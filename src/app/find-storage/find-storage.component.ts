@@ -11,6 +11,7 @@ export class FindStorageComponent implements OnInit {
   service :StorageApiService;
   searchId: number;
   storage: any;
+  shown:boolean = false;
   constructor(service: StorageApiService) {
     this.service=service;
     this.searchId=0;
@@ -23,7 +24,6 @@ export class FindStorageComponent implements OnInit {
     })
   }
   onClick():void{
-    this.storage=0;
+    this.storage =0;
   }
-
 }

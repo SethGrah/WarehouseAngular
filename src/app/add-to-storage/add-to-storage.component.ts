@@ -12,7 +12,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class AddToStorageComponent implements OnInit {
   service: StorageApiService;
   storage: storageItem= new storageItem("Name",0,0,"Description");
-
+  
   constructor(service: StorageApiService) {
     this.service=service;
    }

@@ -30,7 +30,9 @@ import { retry, catchError } from 'rxjs/operators';
 
 
 const routes: Routes=[{path:'storage-list',component:StorageListComponent},
-                      {path:'add-to-storage',component:AddToStorageComponent}];
+                      {path:'add-to-storage',component:AddToStorageComponent}, 
+                      {path: 'update-storage',component:UpdateStorageComponent}
+                    ];
 
 @NgModule({
   declarations: [

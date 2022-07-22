@@ -18,7 +18,7 @@
             <mat-card-actions fxLayoutAlign="space-evenly">
                 <p-button class="flex-button" name="onDelete" (onClick)="onDelete(storage.id)" >Delete?</p-button>
                 
-                <p-button class="flex-button" (onClick)="onUpdatePress(storage.id)">Update?</p-button>
+                <a  routerLink="/update-storage" routerLinkActive="active" ariaCurrentWhenActive="page" [queryParams]="{ storeid: storage.id }"><p-button class="flex-button" >Update?</p-button></a>
             </mat-card-actions>
         </mat-card>
         </div>

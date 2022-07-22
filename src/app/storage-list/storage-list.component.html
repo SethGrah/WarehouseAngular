@@ -1,6 +1,6 @@
 
 
-<div class="content">
+<div class="content" fxLayoutAlign="center center">
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
         <div fxFlex="25%"  fxFlex.xs = "100%" fxFlex.sm="33%" *ngFor="let storage of currStorage"> 
             <mat-card class ="mat-elevation-z4">
@@ -9,16 +9,16 @@
             </mat-card-header>
             <mat-card-content>
                 <p class="list-content"><strong>ID:</strong> {{storage.id}}</p>
-                <p class="list-content"> Item Size: {{storage.itemSize}}</p>
+                <p class="list-content"> <strong>Item Size: </strong>{{storage.itemSize}}</p>
                 <p [ngClass]="{'outofstock':storage.quantity === 0}" class="list-content">
-                        Quantity: {{storage.quantity}}
+                       <strong>Quantity:</strong>  {{storage.quantity}}
                 </p> 
-                <p class="list-content">Item Description: {{storage.itemDesc}}</p>
+                <p class="list-content"><strong>Item Description:</strong>  {{storage.itemDesc}}</p>
             </mat-card-content>
             <mat-card-actions fxLayoutAlign="space-evenly">
                 <p-button class="flex-button" name="onDelete" (onClick)="onDelete(storage.id)" >Delete?</p-button>
                 
-                <p-button class="flex-button">Update?</p-button>
+                <p-button class="flex-button" (onClick)="onUpdatePress(storage.id)">Update?</p-button>
             </mat-card-actions>
         </mat-card>
         </div>

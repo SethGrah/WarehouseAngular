@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { storageItem } from '../models/storageItem';
 import { StorageApiService } from '../storage-api.service';
 
 @Component({
@@ -8,11 +9,12 @@ import { StorageApiService } from '../storage-api.service';
 })
 export class StorageListComponent implements OnInit {
   service :StorageApiService
-  currStorage: Array<any> = [];
+  @Input() currStorage: Array<any> = [];
   constructor(service: StorageApiService) {
     this.service=service;
    }
 
+   //Initializes the list component
   ngOnInit(): void {
     this.service.findAll().subscribe(data=>{
       this.currStorage = data;
@@ -24,12 +26,18 @@ export class StorageListComponent implements OnInit {
     this.service.findAll().subscribe(data=>{
       this.currStorage = data;
     })
+    this.service.findAll().subscribe(data=>{
+      this.currStorage = data;
+    })
   }
-  onUpdate(givenid:number):void{
-    console.log("Made it to Update" +givenid);
-    this.service.update(givenid).subscribe(data=>console.log(data));
+  onUpdate(storage:storageItem):void{
+    console.log("Made it to Update" +storage.id);
+    this.service.update(storage).subscribe(data=>console.log(data));
   }
+  onUpdatePress(givenid:number):void{
 
+
+  }
 }
 
 

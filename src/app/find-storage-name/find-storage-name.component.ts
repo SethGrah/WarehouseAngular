@@ -6,6 +6,9 @@ import { StorageApiService } from '../storage-api.service';
   templateUrl: './find-storage-name.component.html',
   styleUrls: ['./find-storage-name.component.css']
 })
+
+//This class stores the name inputted in the text field and the object it receives from the query
+// 
 export class FindStorageNameComponent implements OnInit {
   service :StorageApiService;
   searchName: string;

@@ -22,4 +22,8 @@ export class FindStorageComponent implements OnInit {
       this.storage = data;
     })
   }
+  onClick():void{
+    this.storage=0;
+  }
+
 }

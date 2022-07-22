@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { catchError, map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { storageItem } from './models/storageItem';
 
@@ -24,12 +24,14 @@ export class StorageApiService {
     return this.http.get(environment.apiUrl+name);
   }
   save(storage:any):Observable<any>{
-    return this.http.post<any>(environment.apiUrl,storage);
+    return this.http.post<any>(environment.apiUrl,storage)
   }
-  delete(id:number){
+  delete(id:number):Observable<any>{
     return this.http.delete(environment.apiUrl+id);
   }
   update(storage:any):Observable<any>{
     return this.http.put(environment.apiUrl,storage);
   }
+
+//All basic Crud operations
 }

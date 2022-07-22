@@ -25,6 +25,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
 import {InputTextModule} from 'primeng/inputtext';
 import { Routes,RouterModule } from '@angular/router';
+import { UpdateStorageComponent } from './update-storage/update-storage.component';
+import { retry, catchError } from 'rxjs/operators';
 
 
 const routes: Routes=[{path:'storage-list',component:StorageListComponent},
@@ -38,6 +40,7 @@ const routes: Routes=[{path:'storage-list',component:StorageListComponent},
     FindStorageNameComponent,
     AddToStorageComponent,
     HeaderComponent,
+    UpdateStorageComponent,
     
 
   ],

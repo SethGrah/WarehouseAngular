@@ -7,10 +7,13 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+//Media sub watches the window, and if it reaches the xs size, resize
 export class AppComponent implements OnInit,OnDestroy {
 
   title = 'warehouse-app';
   mediaSub:Subscription=new Subscription();
+  
   deviceXs: boolean=false;
   constructor(public mediaObserver:MediaObserver){
   }

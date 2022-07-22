@@ -8,6 +8,7 @@
                 </span>
             </button>
             <div *ngIf ="!deviceXs">
+                <!-- Routing, when you click them, open the other component -->
                 <a routerLink="/storage-list" routerLinkActive="active" ariaCurrentWhenActive="page"><button mat-button ><mat-icon>menu_open</mat-icon><span>Saloon Inventory</span></button></a>
                 <a routerLink="/add-to-storage" routerLinkActive="active" ariaCurrentWhenActive="page"><button mat-button><mat-icon>add</mat-icon><span>Add to Saloon Inventory</span></button></a>
                 
@@ -15,7 +16,7 @@
         </div>
 
     </mat-toolbar-row>
-
+    <!-- Shows second row if deviceXs is true -->
     <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between end">
         <div>
             <button mat-button>

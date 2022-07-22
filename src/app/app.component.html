@@ -1,11 +1,11 @@
 <app-header [deviceXs]="deviceXs"></app-header>
-<div class="background-image">
+<div>
+    <!-- Shows the search bars -->
     <div class="flex-container" fxLayout="row" fxLayoutAlign="space-evenly">
-
-
         <app-find-storage-name></app-find-storage-name>
         <app-find-storage></app-find-storage>
 
     </div>
+    <!-- Shows add and the list -->
     <router-outlet></router-outlet>
 </div>

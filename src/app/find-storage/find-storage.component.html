@@ -1,22 +1,22 @@
 <label>Search by ID: </label>
-<input type ="number" class="inputting" name="searchId" [(ngModel)]="searchId" (change)="onChange()" placeholder="Name" /> 
-<button type="button" pButton label="Submit" ></button>
+<input type ="number" class="inputting" name="searchId" [(ngModel)]="searchId" placeholder="ID" /> 
+<button type="button" pButton label="Submit" (click)="onSub()"></button>
 
-<div class="content" *ngIf="storage">
+<div class="content" *ngIf="shown">
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
         <div fxFlex="100%"  fxFlex.xs = "100%" fxFlex.sm="33%" > 
             <mat-card class ="mat-elevation-z4">
-            <mat-card-header class="head" fxLayoutAlign="start space-between">
-               <mat-card-title><strong>{{storage.itemName}}</strong></mat-card-title> 
-             <p-button ngClick="onClick" class="exit"><mat-icon class="center" >close</mat-icon></p-button> 
+            <mat-card-header class="head" >
+               <mat-card-title ><strong>{{storage.itemName}}</strong></mat-card-title> 
+                <p-button  (click)="isShown()"  class="exit"><mat-icon class="center" >close</mat-icon></p-button> 
             </mat-card-header>
             <mat-card-content>
-                <p class="list-content">ID: {{storage.id}}</p>
-                <p class="list-content"> Item Size: {{storage.itemSize}}</p>
+                <p class="list-content"><strong>ID:</strong> {{storage.id}}</p>
+                <p class="list-content"> <strong>Item Size:</strong> {{storage.itemSize}}</p>
                 <p [ngClass]="{'outofstock':storage.quantity === 0}" class="list-content">
-                        Quantity: {{storage.quantity}}
+                    <strong>Quantity:</strong>  {{storage.quantity}}
                 </p> 
-                <p class="list-content">Item Description: {{storage.itemDesc}}</p>
+                <p class="list-content"><strong>Item Description:</strong> {{storage.itemDesc}}</p>
             </mat-card-content>
             <mat-card-actions fxLayoutAlign="space-evenly">
 
@@ -25,3 +25,4 @@
         </div>
     </div>
 </div>
+<!-- (change)="onChange() fxLayoutAlign="start space-evenly">--> 

@@ -14,7 +14,7 @@
 
 }
 .head{
-  display:flex;
+  display: flex;
   font-weight: bolder;
   border-style: solid;
   padding:16px;
@@ -23,14 +23,10 @@
   
   
 }
-.list-content{
-  font-size: large;
-}
-.flex-button{
-  max-width: 80%;
-}
+
 .mat-card-title{
-  display:flex;
+  
+
   font-weight: bolder;
   padding: 3px;
   font-size: x-large;

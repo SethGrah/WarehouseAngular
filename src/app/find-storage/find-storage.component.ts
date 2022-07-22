@@ -9,12 +9,12 @@ import { StorageApiService } from '../storage-api.service';
 export class FindStorageComponent implements OnInit {
 
   service :StorageApiService;
-  searchId: number;
+  searchId: any;
   storage: any;
   shown:boolean = false;
   constructor(service: StorageApiService) {
     this.service=service;
-    this.searchId=0;
+    this.searchId="";
    }
   ngOnInit(): void {
   }
@@ -23,7 +23,14 @@ export class FindStorageComponent implements OnInit {
       this.storage = data;
     })
   }
-  onClick():void{
-    this.storage =0;
+  isShown():void{
+    
+    this.shown = !this.shown
+  }
+  onSub():void{
+    if(this.searchId!=""){
+    this.onChange();
+    this.isShown();
+    }
   }
 }

@@ -3,10 +3,9 @@
         <label for="stored"> Update an item in storage</label>
         <form (ngSubmit)="onSubmit(); homeForm.reset()" id="new-storage" #homeForm>
             <div class="form-group">
-                <label for="id"><strong>ID:</strong></label>
+                <label for="id"><strong>ID: {{storage.id}}</strong></label>
                 <br>
-                <input type="text" class="form-control" id="id" required name="id" [(ngModel)]="storage.id"
-                    pInputText>
+             
             </div>
             <div class="form-group">
                 <label for="name"><strong>Name:</strong></label>

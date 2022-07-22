@@ -6,3 +6,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
 .background-image{
     background-image: url('./app/images/saloon.jpg');
 }
+.mat-card{
+    background-color: antiquewhite;
+}

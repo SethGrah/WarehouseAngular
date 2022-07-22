@@ -23,20 +23,18 @@ export class StorageListComponent implements OnInit {
   onDelete(givenid:number):void{
     console.log("Made it to delete" +givenid);
     this.service.delete(givenid).subscribe(data=>console.log(data));
-    this.service.findAll().subscribe(data=>{
-      this.currStorage = data;
-    })
-    this.service.findAll().subscribe(data=>{
-      this.currStorage = data;
-    })
+    // this.service.findAll().subscribe(data=>{ //Jank way
+    //   this.currStorage = data;
+    // })
+    // this.service.findAll().subscribe(data=>{
+    //   this.currStorage = data;
+    // })
+    this.ngOnInit(); //thanks atul
+
   }
   onUpdate(storage:storageItem):void{
     console.log("Made it to Update" +storage.id);
     this.service.update(storage,storage.id).subscribe(data=>console.log(data));
-  }
-  onUpdatePress(givenid:number):void{
-
-
   }
 }
 

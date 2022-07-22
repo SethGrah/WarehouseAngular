@@ -13,9 +13,11 @@ export class FindStorageNameComponent implements OnInit {
   service :StorageApiService;
   searchName: string;
   storage: any;
+  shown:boolean=false;
   constructor(service: StorageApiService) {
     this.service=service;
     this.searchName="";
+  
    }
   ngOnInit(): void {
   }
@@ -23,5 +25,15 @@ export class FindStorageNameComponent implements OnInit {
     this.service.findByName(this.searchName).subscribe(data =>{
       this.storage = data;
     })
+  }
+  
+  isShown():void{
+    this.shown = !this.shown
+  }
+  //Wrapper function to call both in button onClick
+  onSub():void{
+    if(this.searchName!="" && this.searchName!=null){
+    this.onChange();
+    this.isShown();}
   }
 }

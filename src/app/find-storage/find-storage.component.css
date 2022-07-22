@@ -10,11 +10,9 @@
   width: 200px;
 }
 .head{
-  font-weight: bolder;
-  font-size: x-large;
+  display: flex;
   border-style: solid;
-  padding:16px;
-  text-align: start;
+  justify-content: space-between; padding:16px;
 }
 .list-content{
   font-size: large;
@@ -32,4 +30,10 @@
   margin:20px;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 
+}
+.exit{
+  align-items: end;
+}
+.mat-card-title{
+  padding-top: 8px;
 }

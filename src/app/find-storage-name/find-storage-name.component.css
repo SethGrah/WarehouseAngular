@@ -10,9 +10,9 @@
     width: 200px;
   }
   .head{
-    font-weight: bolder;
-    font-size: x-large;
-    border-style: solid;
+    display: flex;
+    justify-content: space-between;
+
     padding:16px;
   }
   .list-content{

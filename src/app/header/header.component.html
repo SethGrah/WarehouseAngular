@@ -4,12 +4,13 @@
             <button mat-button>
                 <mat-icon>home</mat-icon>
                 <span class="logo">
-                    List
+                    Stormer Saloon
                 </span>
             </button>
             <div *ngIf ="!deviceXs">
-                <button mat-button><mat-icon>add</mat-icon><span>Add to storage</span></button>
-                <button mat-button><mat-icon>remove</mat-icon><span> Remove from to storage</span></button>
+                <a routerLink="/storage-list" routerLinkActive="active" ariaCurrentWhenActive="page"><button mat-button ><mat-icon>menu_open</mat-icon><span>Saloon Inventory</span></button></a>
+                <a routerLink="/add-to-storage" routerLinkActive="active" ariaCurrentWhenActive="page"><button mat-button><mat-icon>add</mat-icon><span>Add to Saloon Inventory</span></button></a>
+                
             </div>
         </div>
 
@@ -20,13 +21,13 @@
             <button mat-button>
                 <mat-icon>add</mat-icon>
                 <span>
-                    Add to storage
+                    Saloon Inventory
                 </span>
             </button>
             <button mat-button>
                 <mat-icon>remove</mat-icon>
                 <span>
-                    Remove from to storage
+                    Add to Saloon Inventory
                 </span>
             </button>
         </div>

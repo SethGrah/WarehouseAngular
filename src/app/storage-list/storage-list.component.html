@@ -1,22 +1,28 @@
 
-<p-table [value]="currStorage" [autoLayout]="true" responsiveLayout="scroll">
-    <ng-template pTemplate="header">
-        <tr><th> ID </th><th>Item Name</th><th>Item Size</th><th> Quantity </th><th>Description</th><th></th></tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-storage>
-        <tr>
-        <td>{{storage.id}}</td>
-        <td>{{storage.itemName}}</td>
-        <td>{{storage.itemSize}}</td>
-        <td>
-            <div [ngClass]="{'outofstock':storage.quantity === 0}">
-                {{storage.quantity}}
 
-            </div>
-            
-        </td>
-        <td>{{storage.itemDesc}}</td>
-        <p-button>Delete?</p-button>
-        </tr>
-    </ng-template>
-</p-table>
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="25%"  fxFlex.xs = "100%" fxFlex.sm="33%" *ngFor="let storage of currStorage"> 
+            <mat-card class ="mat-elevation-z4">
+            <mat-card-header class="head" fxLayoutAlign="start">
+               <mat-card-title>{{storage.itemName}}</mat-card-title> 
+            </mat-card-header>
+            <mat-card-content>
+                <p class="list-content"><strong>ID:</strong> {{storage.id}}</p>
+                <p class="list-content"> Item Size: {{storage.itemSize}}</p>
+                <p [ngClass]="{'outofstock':storage.quantity === 0}" class="list-content">
+                        Quantity: {{storage.quantity}}
+                </p> 
+                <p class="list-content">Item Description: {{storage.itemDesc}}</p>
+            </mat-card-content>
+            <mat-card-actions fxLayoutAlign="space-evenly">
+                <p-button class="flex-button" name="onDelete" (onClick)="onDelete(storage.id)" >Delete?</p-button>
+                
+                <p-button class="flex-button">Update?</p-button>
+            </mat-card-actions>
+        </mat-card>
+        </div>
+    </div>
+    
+   
+</div>

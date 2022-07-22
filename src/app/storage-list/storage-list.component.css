@@ -4,3 +4,27 @@
   color: #FF5252;
   text-decoration: line-through;
 }
+.content{
+  padding:16px;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  
+}
+.content > mat-card{
+  width: 200px;
+
+}
+.head{
+  font-weight: bolder;
+  font-size: x-large;
+  border-style: solid;
+  padding:16px;
+  text-align: start;
+}
+.list-content{
+  font-size: large;
+}
+.flex-button{
+  max-width: 80%;
+}

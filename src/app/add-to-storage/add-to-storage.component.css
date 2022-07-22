@@ -1,0 +1,11 @@
+.content{
+    padding:16px;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+  }
+  .content > mat-card{
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+  }

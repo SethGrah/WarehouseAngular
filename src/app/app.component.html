@@ -1,33 +1,11 @@
-
 <app-header [deviceXs]="deviceXs"></app-header>
-
-<!-- 
-<header>
-    <mat-toolbar>
-        <div class="imgdiv"><img src = "D:\Work Training\WarehouseProjects\warehouse-app\src\assets\Cowboy.png" class="img1" alt="Cowboy hat"/></div>
-        <span>Wild Warehouse Management</span>
-        
-    </mat-toolbar>
-
-</header>
-   -->
+<div class="background-image">
+    <div class="flex-container" fxLayout="row" fxLayoutAlign="space-evenly">
 
 
+        <app-find-storage-name></app-find-storage-name>
+        <app-find-storage></app-find-storage>
 
-<div class="flex-container" fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="space-evenly">
-
-
-<app-find-storage-name></app-find-storage-name>
-<app-find-storage></app-find-storage>
-
+    </div>
+    <router-outlet></router-outlet>
 </div>
-<div class="flex-container" fxLayout="row" fxLayoutGap="80px" fxLayoutAlign="space-evenly">
-    <div  fxLayout="column"><app-add-to-storage></app-add-to-storage> </div>
-    <div class="item" fxLayout="column"><app-storage-list></app-storage-list></div>
-    <div fxLayout="column"><app-update-storage></app-update-storage></div>
-
-</div>
-
-<footer class="flex-footer" >
-    <div><app-delete-storage></app-delete-storage></div>
-</footer>

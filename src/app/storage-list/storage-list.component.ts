@@ -18,5 +18,18 @@ export class StorageListComponent implements OnInit {
       this.currStorage = data;
     })
   }
+  onDelete(givenid:number):void{
+    console.log("Made it to delete" +givenid);
+    this.service.delete(givenid).subscribe(data=>console.log(data));
+    this.service.findAll().subscribe(data=>{
+      this.currStorage = data;
+    })
+  }
+  onUpdate(givenid:number):void{
+    console.log("Made it to Update" +givenid);
+    this.service.update(givenid).subscribe(data=>console.log(data));
+  }
 
 }
+
+

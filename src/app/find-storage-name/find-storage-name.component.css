@@ -1,0 +1,36 @@
+.outofstock {
+    font-weight: 700;
+    color: #FF5252;
+    text-decoration: line-through;
+  }
+  .content{
+    padding:16px;
+  }
+  .content > mat-card{
+    width: 200px;
+  }
+  .head{
+    font-weight: bolder;
+    font-size: x-large;
+    border-style: solid;
+    padding:16px;
+  }
+  .list-content{
+    font-size: large;
+  }
+  .inputting {
+    margin:20px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+
+  }
+  .center {
+    justify-content:right;
+    align-items: top;
+    height: 20px;
+  }
+  .button{
+    margin: 0px;
+  }
+  .flex-button{
+    max-width: 100%;
+  }

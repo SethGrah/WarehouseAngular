@@ -1,18 +1,29 @@
-<input type ="number" name="searchId" [(ngModel)]="searchId" (change)="onChange()"/>
-<!-- parent child components @Input/@output
+<label>Search by ID: </label>
+<input type ="number" class="inputting" name="searchId" [(ngModel)]="searchId" (change)="onChange()" placeholder="Name" /> 
+<button type="button" pButton label="Submit"></button>
 
-seperate child component that renders a single artist object on a card
-pass the selected artist to the child component
-
-<child-singleitemcard-component>
-
--->
-
-<section *ngIf="storage">
-    <div>ID: {{storage.id}}</div>
-    <div>Name: {{storage.itemName}}</div>
-    <div>Size: {{storage.itemSize}}</div>
-    <div>Quantity: {{storage.quantity}}</div>
-    <div> Descriptio: {{storage.itemDesc}}</div>
-</section>
-<div><button type="button" pButton label="Submit"></button></div>
+<div class="content" *ngIf="storage">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div fxFlex="100%"  fxFlex.xs = "100%" fxFlex.sm="33%" > 
+            <mat-card class ="mat-elevation-z4">
+            <mat-card-header class="head" fxLayoutAlign="start space-between">
+               <mat-card-title>{{storage.itemName}}</mat-card-title> 
+               <mat-icon class="center">close</mat-icon>
+            </mat-card-header>
+            <mat-card-content>
+                <p class="list-content">ID: {{storage.id}}</p>
+                <p class="list-content"> Item Size: {{storage.itemSize}}</p>
+                <p [ngClass]="{'outofstock':storage.quantity === 0}" class="list-content">
+                        Quantity: {{storage.quantity}}
+                </p> 
+                <p class="list-content">Item Description: {{storage.itemDesc}}</p>
+            </mat-card-content>
+            <mat-card-actions fxLayoutAlign="space-evenly">
+                <p-button>Delete?</p-button>
+                
+                <p-button>Update?</p-button>
+            </mat-card-actions>
+        </mat-card>
+        </div>
+    </div>
+</div>

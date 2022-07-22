@@ -8,12 +8,10 @@ import { HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { StorageListComponent } from './storage-list/storage-list.component';
 import { FindStorageComponent } from './find-storage/find-storage.component';
-import { DeleteStorageComponent } from './delete-storage/delete-storage.component';
-import { UpdateStorageComponent } from './update-storage/update-storage.component';
 import { FindStorageNameComponent } from './find-storage-name/find-storage-name.component';
 import { AddToStorageComponent } from './add-to-storage/add-to-storage.component';
 
-import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+
 import {ButtonModule} from 'primeng/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar'
@@ -21,25 +19,47 @@ import {TableModule} from 'primeng/table';
 import { HeaderComponent } from './header/header.component';
 import {MatButtonModule} from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon'
+import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav'
+import {MatDividerModule} from '@angular/material/divider';
+import {MatTabsModule} from '@angular/material/tabs';
+import {InputTextModule} from 'primeng/inputtext';
+import { Routes,RouterModule } from '@angular/router';
+
+
+const routes: Routes=[{path:'storage-list',component:StorageListComponent},
+                      {path:'add-to-storage',component:AddToStorageComponent}];
 
 @NgModule({
   declarations: [
     AppComponent,
     StorageListComponent,
     FindStorageComponent,
-    DeleteStorageComponent,
-    UpdateStorageComponent,
     FindStorageNameComponent,
     AddToStorageComponent,
-    HeaderComponent
+    HeaderComponent,
+    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    AccordionModule,
-    ButtonModule, FlexLayoutModule, BrowserAnimationsModule,MatToolbarModule,TableModule,MatButtonModule,MatIconModule
+    ButtonModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    TableModule,
+    MatButtonModule,
+    MatIconModule,
+    MatCardModule,
+    MatSidenavModule,
+    MatDividerModule,
+    MatTabsModule,
+    InputTextModule,
+    RouterModule.forRoot(routes)
+
   ],
   providers: [],
   bootstrap: [AppComponent]

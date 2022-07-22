@@ -21,3 +21,7 @@ footer{
 .item {
   flex-grow:2;
 }
+.background-image{
+  background-image: url('../app/images/saloon.jpg');
+  height: max-content;
+}

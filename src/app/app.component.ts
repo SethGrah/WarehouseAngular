@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { MediaChange,MediaObserver } from '@angular/flex-layout';
 import { Subscription } from 'rxjs';
 
@@ -25,4 +25,5 @@ export class AppComponent implements OnInit,OnDestroy {
   ngOnDestroy(): void {
     this.mediaSub.unsubscribe();
   }
+
 }
